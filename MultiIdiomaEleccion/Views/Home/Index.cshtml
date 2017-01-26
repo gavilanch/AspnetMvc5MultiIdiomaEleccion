@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Recursos.Recurso.Mensaje_Bienvenida
+
+<h5>
+    Cambiar idioma
+</h5>
+
+
+@using (Html.BeginForm("SeleccionarIdioma", "Home"))
+{
+    @Html.DropDownList("Cultura", (List<SelectListItem>)ViewBag.IdiomasVB)
+    <input type="submit" />   
+}
+
